@@ -68,9 +68,11 @@ let putCRUD = async (req, res) => {
     let allUsers = await CRUDService.updateUserData(data);
     //return res.send("Update done!");
 
-    return res.render("displayCRUD.ejs", {
-        dataTable: allUsers
-    });
+    return res.redirect("/get-crud");
+
+    // return res.render("displayCRUD.ejs", {
+    //     dataTable: allUsers
+    // });
     //updateUserData
 }
 
